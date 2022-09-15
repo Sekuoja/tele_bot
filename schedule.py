@@ -88,12 +88,4 @@ def get_schedule_next_week():
     return message
 
 
-# def lessons_timer():
-#     pass
-#     sess = requests.session()
-#     sess.post("https://ies.unitech-mo.ru/auth", data=auth)
-#     resp = sess.post(f"https://ies.unitech-mo.ru/schedule", data={"load": 1})
-#     today = datetime.datetime.today().weekday() + 1
-#     for day in resp.json():
-#         if day['daynum'] == today:
-#             pr
+
