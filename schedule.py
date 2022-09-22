@@ -3,10 +3,17 @@ import datetime
 import json
 
 import requests
+import re
+
 
 week = {1: "Понедельник", 2: "Вторник", 3: "Среда", 4: "Четверг", 5: "Пятница", 6: "Суббота", 7: "Воскресенье"}
 with open("auth.json", 'r') as f:
     auth = json.load(f)
+
+
+
+
+
 
 
 def get_schedule():
@@ -43,6 +50,8 @@ def get_schedule_today():
             message += f"Пара №{day['timenum']}\n"
             message += f"Время: {day['time']}\n"
             message += f"{day['lparam']}\n"
+
+
     sess.close()
     return message
 
